@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_alternance/screens/detail_screen.dart';
 import 'package:http/http.dart' as http;
 
 import '../listMovie.dart';
@@ -60,12 +60,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.only(left: 15, right: 15),
                     child: Container(
                       child: GestureDetector(
-                        // onTap: () async {
-                        //   Navigator.push(
-                        //       context,
-                        //       MaterialPageRoute(
-                        //           builder: (context) => const DetailScreen()));
-                        // },
+                        onTap: () async {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DetailScreen()));
+                        },
                         // onTap: widget.onPressed,
                         child: Stack(children: [
                           Container(
