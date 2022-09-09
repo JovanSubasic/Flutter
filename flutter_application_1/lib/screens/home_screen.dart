@@ -56,6 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   //   // color: Colors.amber[colorCodes[index]],
                   //   child: Center(child: Text('Entry ${dataList[index].title}')),
                   // );
+                  final String valueid = (dataList[index].id).toString() ?? "";
                   return Padding(
                     padding: const EdgeInsets.only(left: 15, right: 15),
                     child: Container(
@@ -64,7 +65,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const DetailScreen()));
+                                  builder: (context) => DetailScreen(
+                                        value: valueid,
+                                      )));
                         },
                         // onTap: widget.onPressed,
                         child: Stack(children: [
